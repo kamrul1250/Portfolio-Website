@@ -303,3 +303,117 @@ document.addEventListener('DOMContentLoaded', () => {
         document.body.classList.remove('menu-open');
     });
 });
+
+
+
+
+
+
+ const projects = [
+  {
+    title: "Matrimonial Biodata",
+    description: "A structured display of personal and professional information.",
+    iconClass: "fas fa-file-code",
+    techStack: { html: 40, css: 30, js: 30 },
+    link: "Matrimonial_validated-main/index.html"
+  },
+  {
+    title: "Simple Calculator",
+    description: "A basic JavaScript calculator for arithmetic operations.",
+    iconClass: "fas fa-calculator",
+    techStack: { html: 25, css: 25, js: 50 },
+    link: "Calculator-main/Calculator-main/Web Lab Calculator-20250624T134428Z-1-001/Web Lab Calculator/index.html"
+  },
+  {
+    title: "Daraz Clone",
+    description: "A website that clones the Daraz layout using HTML, CSS, and JavaScript.",
+    iconClass: "fas fa-file-code",
+    techStack: { html: 35, css: 35, js: 30 },
+    link: "Daraz-Replica-/index.html"
+  },
+  {
+    title: "Harvard Styled Portfolio",
+    description: "A modern replica of Harvard's official website using HTML, CSS, and JavaScript animations.",
+    iconClass: "fas fa-university",
+    techStack: { html: 30, css: 45, js: 25 },
+    link: "Portfolio/index.html"
+  }
+];
+
+
+function createTechStackHTML(techStack) {
+  if (!techStack) return "";
+
+  const colors = { html: "#e34c26", css: "#2965f1", js: "#f1e05a" };
+  let barsHTML = "";
+  let labelsHTML = "";
+
+  for (const [tech, percent] of Object.entries(techStack)) {
+    if (percent > 0) {
+      barsHTML += `<div style="background-color:${colors[tech]}; width:${percent}%; height: 8px; border-radius: 5px;"></div>`;
+      labelsHTML += `
+        <span style="display:flex; align-items:center; gap:5px; font-size:14px; color:#333; font-weight:500;">
+          <span style="display:inline-block; width:10px; height:10px; border-radius:50%; background-color:${colors[tech]};"></span> 
+          ${tech.toUpperCase()} <span>${percent}%</span>
+        </span>
+      `;
+    }
+  }
+
+  return `
+    <div style="display:flex; overflow:hidden; margin-bottom:10px; background:#e0e0e0; border-radius:5px;">
+      ${barsHTML}
+    </div>
+    <div style="display:flex; gap:15px; flex-wrap:wrap; margin-bottom:12px;">
+      ${labelsHTML}
+    </div>
+  `;
+}
+
+async function checkLink(url) {
+  try {
+    const response = await fetch(url, { method: 'HEAD' }); // Only headers, faster
+    return response.ok; // true if status 200-299
+  } catch (error) {
+    return false;
+  }
+}
+
+async function renderPortfolio() {
+  const container = document.getElementById("portfolioGrid");
+  container.innerHTML = "";
+
+  let delay = 100;
+
+  for (const proj of projects) {
+    if (!proj.link) continue;
+
+    const validLink = await checkLink(proj.link);
+
+    if (!validLink) {
+      console.warn(`Link not found or inaccessible: ${proj.link}`);
+      continue; // Skip project if link is invalid
+    }
+
+    const techStackHTML = createTechStackHTML(proj.techStack);
+
+    const projectHTML = `
+      <div class="portfolio-item" data-aos="fade-up" data-aos-delay="${delay}">
+        <div class="portfolio-content">
+          <div class="portfolio-icon"><i class="${proj.iconClass}"></i></div>
+          <h3 class="animate-text">${proj.title}</h3>
+          <p>${proj.description}</p>
+          ${techStackHTML}
+          <a href="${proj.link}" class="btn btn-secondary hover-effect" target="_blank" rel="noopener">View Project</a>
+        </div>
+      </div>
+    `;
+
+    container.insertAdjacentHTML("beforeend", projectHTML);
+    delay += 100;
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  renderPortfolio();
+});
