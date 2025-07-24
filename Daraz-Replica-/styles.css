@@ -1,0 +1,698 @@
+/* Reset & Basics */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f5f5;
+  font-size: 14px;
+  color: #333;
+}
+
+/* Header wrapper */
+.header-wrapper {
+  background-color: #f85606;
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Top Navbar */
+#index-top-navbar {
+  background-color: #f85606;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  padding: 12px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 999;
+}
+
+/* any other index navbar styles, use #index-top-navbar prefix */
+
+
+.top-navbar a {
+  color: white;
+  text-decoration: none;
+  margin-left: 15px;
+  font-weight: 600;
+  font-size: 11px;
+  cursor: pointer;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.top-navbar a:hover {
+  color: #ffd3bc;
+}
+
+/* Main Navbar */
+.main-nav {
+  height: 70px;
+  background-color: #f85606;
+  display: flex;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.main-nav .container {
+  width: 100%;
+  padding: 0;
+}
+
+/* Logo */
+.nav-logo img {
+  width: 120px;
+  object-fit: contain;
+}
+
+/* Search Bar */
+.search-bar {
+  flex-grow: 1;
+  max-width: 650px;
+  margin-left: 30px;
+  position: relative;
+}
+
+.search {
+  width: 100%;
+  height: 42px;
+  padding: 0 50px 0 15px;
+  border-radius: 4px;
+  border: none;
+  background-color: #fff;
+  font-size: 14px;
+  box-sizing: border-box;
+  color: #222;
+}
+
+.search::placeholder {
+  color: #999;
+}
+
+.search-icon {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #ddd6d3;
+  color: #fff;
+  width: 42px;
+  height: 42px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s ease;
+}
+
+.search-icon:hover {
+  background-color: #e04e05;
+}
+
+/* Cart */
+.cart {
+  color: white;
+  font-size: 1.8rem;
+  margin-left: 30px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.3s ease;
+}
+
+.cart:hover {
+  color: #ffd3bc;
+}
+
+/* Banner Slider */
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+/* Banner Slider Container */
+/* Container styling */
+.banner-slider {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  aspect-ratio: 1200 / 400; /* Replace 1200 and 400 with your image width and height */
+  margin: 20px auto;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.slides {
+  position: relative;
+  height: 100%;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background-color: #fff; /* prevents transparency in empty spaces */
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.slide.active {
+  display: block;
+  position: relative;
+}
+
+
+
+/* Arrow buttons */
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.3); /* semi-transparent bg */
+  color: white;
+  border: none;
+  font-size: 2rem;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 50%;
+  opacity: 0;  /* hidden initially */
+  transition: opacity 0.3s ease;
+  z-index: 2;
+}
+
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+.banner-slider:hover .arrow {
+  opacity: 1;
+}
+
+
+
+/* White spacer under banner */
+.white-spacer {
+  height: 20px;
+  background-color: #fff;
+}
+
+/* Promo Banner - same size & aspect ratio as main banner */
+.promo-banner {
+  width: 100%;
+  max-width: 1200px;
+  aspect-ratio: 1200 / 400; /* Replace with your actual promo image width and height */
+  margin: 0 auto 20px auto;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #fff;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+.promo-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+/* Flash Sale Title (outside flash sale container) */
+.flash-sale-title {
+  max-width: 1200px;
+  margin: 0 auto 6px auto; /* Slightly tighter spacing below title */
+  padding-left: 20px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400; /* Normal weight */
+  font-size: 22px;
+  color: #020100;
+  text-transform: none;
+  letter-spacing: 0;
+}
+
+/* Flash Sale Section Container */
+.flash-sale {
+  background-color: #fff;
+  max-width: 1200px;
+  margin: 0 auto 30px auto;
+  padding: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Flash Sale Header: left & right aligned items */
+.flash-sale-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #eee;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 400; /* Normal weight */
+  font-size: 15px;
+  letter-spacing: 0.05em;
+  color: #f85606;
+}
+
+/* Left side label */
+.sale-label {
+  text-transform: uppercase;
+}
+
+/* Right side "Shop All" link */
+.shop-all {
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #f85606;
+  transition: color 0.3s ease;
+}
+
+.shop-all:hover {
+  color: #e04e05;
+}
+
+/* Products container: horizontal scroll with spacing */
+.flash-sale-products {
+  display: flex;
+  gap: 16px;
+  overflow: hidden;       /* Hide overflow for sliding effect */
+  padding: 0 20px;
+  scroll-behavior: smooth;
+  width: 100%;            /* Make sure it fills container */
+  max-width: 1200px;      /* match your container */
+  margin: 0 auto;
+  position: relative;
+}
+
+/* Each product card fixed width (already 170px, keep it) */
+.product-card {
+  flex: 0 0 170px; /* fixed width so sliding works smoothly */
+  background-color: #fff;
+  border-radius: 8px;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+  text-align: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+}
+
+
+/* Product image size */
+.product-card img {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+/* Product title */
+.product-card h4 {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  margin: 5px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Product price */
+.product-card .price {
+  color: #f85606;
+  font-weight: 700;
+  font-size: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* General Reset */
+/* General Reset */
+/* General Reset */
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;  /* Daraz uses white background behind header */
+  font-size: 14px;
+  color: #333;
+  height: 100%;
+}
+
+/* Header */
+.header-wrapper {
+  background-color:  white; /* Daraz bright orange header */
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  width: 100%;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Slightly stronger shadow */
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  color: #f85606; /* Daraz logo text is white in orange header */
+  font-weight: 700;
+  font-size: 20px;
+  user-select: none;
+}
+
+.nav-logo svg {
+  width: 30px;
+  height: 30px;
+  fill: #f85606;
+  margin-right: 8px; /* Slightly smaller margin */
+}
+
+.lang-select {
+  display: flex;
+  align-items: center;
+  color: #f85606;
+  font-size: 14px;
+  cursor: pointer;
+  user-select: none;
+  font-weight: 600;
+}
+
+.flag {
+  font-size: 18px;
+  margin-right: 6px;
+}
+
+.language {
+  margin-left: 8px;
+}
+
+/* Main content background - bright orange block */
+.become-seller-container {
+  background-color: #f85606;
+  padding-top: 88px;
+  padding-bottom: 96px;
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+}
+
+/* Main content wrapper inside container */
+.become-seller-content {
+  display: flex;
+  max-width: 1200px;      /* Fixed max width like Daraz */
+  width: 100%;            /* Full width up to max */
+  padding: 0 24px;        /* Horizontal padding */
+  gap: 48px;              /* Space between left and right sections */
+  box-sizing: border-box;
+  align-items: stretch;   /* equal height columns */
+  min-height: 560px;      /* vertical size */
+}
+
+/* LEFT SIDE */
+.left-side-become-seller {
+  flex: 1 1 0;
+  max-width: 580px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.left-side-become-seller h1 {
+  font-size: 56px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 28px;
+  letter-spacing: -0.02em; /* subtle kerning like Daraz */
+}
+
+.left-side-become-seller p {
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 36px;
+  letter-spacing: 0.01em;
+}
+
+/* RIGHT SIDE */
+.right-side-become-seller {
+  width: 480px;
+  height: 600px;          /* fixed width box */
+  background-color: white;
+  border-radius: 24px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+  padding: 48px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;        /* prevent shrinking */
+}
+
+
+.right-side-become-seller h3 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #111;
+  letter-spacing: 0.02em;
+}
+
+.left-side-become-seller,
+.right-side-become-seller {
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertically center content */
+}
+
+/* Inputs */
+.right-side-become-seller input {
+  width: 100%;
+  padding: 16px 20px;
+  margin-bottom: 24px;
+  border-radius: 10px;
+  border: 1.5px solid #ddd;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.right-side-become-seller input:focus {
+  border-color: #f85606;
+  box-shadow: 0 0 8px rgba(248, 86, 6, 0.3);
+  outline: none;
+}
+
+/* Password wrapper: if you have toggle icon, keep as is */
+
+/* Login button */
+.btn-login {
+  width: 100%;
+  padding: 16px 0;
+  background-color: #f85606;
+  color: white;
+  font-weight: 700;
+  font-size: 18px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 6px 12px rgba(248, 86, 6, 0.4);
+}
+
+.btn-login:hover {
+  background-color: #e04e05;
+  box-shadow: 0 8px 16px rgba(224, 78, 5, 0.6);
+}
+
+/* Terms text */
+.terms-text {
+  margin-top: 22px;
+  font-size: 13px;
+  text-align: center;
+  color: #666;
+  line-height: 1.5;
+}
+
+.terms-text a {
+  color: #f85606;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.terms-text a:hover {
+  text-decoration: underline;
+}
+
+/* Links below */
+.links {
+  font-size: 14px;
+  text-align: right;
+  margin-top: 24px;
+}
+
+.links a {
+  display: block;
+  margin-bottom: 6px;
+  color: #0071dc;  /* Daraz uses a strong blue */
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.links a:hover {
+  color: #e04e05;
+}
+
+/* Create account */
+.create-account {
+  font-size: 14px;
+  text-align: center;
+  margin-top: 28px;
+  color: #555;
+}
+
+.create-account a {
+  color: #0071dc;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.create-account a:hover {
+  color: #e04e05;
+}
+
+/* Footer */
+footer {
+  padding: 20px;
+  background-color: #f1f1f1;
+  text-align: center;
+  margin-top: 80px;
+}
+
+footer p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .become-seller-content {
+    flex-direction: column;
+    gap: 40px;
+    min-height: auto;
+    padding: 0 16px;
+  }
+  .right-side-become-seller {
+    max-width: 100%;
+    padding: 40px 32px;
+    border-radius: 20px;
+  }
+  .left-side-become-seller {
+    max-width: 100%;
+    text-align: center;
+  }
+  .left-side-become-seller h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+  .left-side-become-seller p {
+    font-size: 18px;
+    margin-bottom: 24px;
+  }
+  .links {
+    text-align: center;
+  }
+}
+
+
+
+
+/* Js validation */
+
+.error-text {
+  color: red;
+  font-size: 0.85em;
+  margin-top: 4px;
+}
+
+.input-error {
+  border: 1px solid red;
+  outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

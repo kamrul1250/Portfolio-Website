@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1.0, user-scalable=no">
+    <title>Kamrul Hassan - Portfolio Website</title>
+    <!-- Link to the main stylesheet for global styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts for Harvard-inspired typography (Merriweather for serif, Open Sans for sans-serif) -->
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Main Header Section -->
+    <header class="main-header">
+        <div class="container">
+            <h1 class="logo">
+                <a href="#">Kamrul Hassan</a>
+            </h1>
+            <!-- Side Navigation Menu and Overlay remain here -->
+            <nav class="side-nav" id="side-nav">
+                <ul class="nav-list">
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#portfolio">My Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-overlay" id="menu-overlay"></div>
+        </div>
+        <!-- Harvard-style Search & Menu Actions OUTSIDE .container -->
+        <div class="header-actions">
+            <a href="#" class="header-action" aria-label="Search">
+                <i class="fas fa-search"></i>
+            </a>
+           <button class="header-action menu-toggle" id="menu-toggle" aria-label="Toggle Menu">
+  <i class="fas fa-bars"></i>
+  <span>Menu</span>
+</button>
+
+        </div>
+    </header>
+
+    <!-- Hero Section - The prominent top section with a background image -->
+    <section class="hero-section">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="typing-effect">Building Solutions, One Line of Code at a Time</h2>
+<p class="fade-up-effect">Passionate about design, development, and making an impact.</p>
+
+                <a href="#portfolio" class="btn btn-primary slide-up-effect">Take a Look at My Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="about-me-section section-padding">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-down">About Me</h2>
+            <div class="about-content">
+                <div class="profile-image" data-aos="fade-right" data-aos-delay="200">
+                    <img src="photo_6258050852929520986_y.jpg" alt="Your Profile Picture">
+                </div>
+                <div class="profile-text" data-aos="fade-left" data-aos-delay="400">
+                    <p id="original-bio-p1" class="animate-text">
+    Hello! I'm Kamrul Hassan, a passionate researcher, designer, and developer. With a solid background in computer science and a love for creativity, I enjoy building intuitive and impactful digital solutions that solve real-world problems.
+</p>
+<p id="original-bio-p2" class="animate-text">
+    Beyond my professional work, I’m a lifelong learner and tech enthusiast. I enjoy exploring emerging technologies, contributing to open-source projects, and keeping up with the latest trends in the industry.
+</p>
+<p class="fade-in">
+    This website is a personal showcase of my journey, projects, and growth. I believe in combining creativity with functionality to deliver meaningful solutions that make a difference.
+</p>
+<p class="fade-in">
+    Thank you for stopping by! I’m always excited to connect with like-minded professionals and explore new opportunities and collaborations.
+</p>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- My Portfolio Section -->
+<section id="portfolio" class="portfolio-section section-padding bg-light">
+  <div class="container">
+    <h2 data-aos="fade-down">My Portfolio</h2>
+    <div class="portfolio-grid">
+
+      <!-- Matrimonial Biodata Portfolio Item -->
+      <div class="portfolio-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="portfolio-content">
+          <div class="portfolio-icon"><i class="fas fa-file-code"></i></div>
+          <h3 class="animate-text">Matrimonial Biodata</h3>
+          <p>A structured display of personal and professional information.</p>
+          <div class="tech-stack-bar">
+            <div class="bar-segment html" style="width: 40%;"></div>
+            <div class="bar-segment css" style="width: 30%;"></div>
+            <div class="bar-segment js" style="width: 30%;"></div>
+          </div>
+          <div class="tech-labels">
+            <span class="tech-dot html-dot"></span> HTML <span class="percent">40%</span>
+            <span class="tech-dot css-dot"></span> CSS <span class="percent">30%</span>
+            <span class="tech-dot js-dot"></span> JavaScript <span class="percent">30%</span>
+          </div>
+          <a href="Matrimonial_validated-main/index.html" class="btn btn-secondary hover-effect">View Biodata</a>
+        </div>
+      </div>
+
+      <!-- Simple Calculator Portfolio Item -->
+      <div class="portfolio-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="portfolio-content">
+          <div class="portfolio-icon"><i class="fas fa-calculator"></i></div>
+          <h3 class="animate-text">Simple Calculator</h3>
+          <p>A basic JavaScript calculator for arithmetic operations.</p>
+          <div class="tech-stack-bar">
+            <div class="bar-segment html" style="width: 25%;"></div>
+            <div class="bar-segment css" style="width: 25%;"></div>
+            <div class="bar-segment js" style="width: 50%;"></div>
+          </div>
+          <div class="tech-labels">
+            <span class="tech-dot html-dot"></span> HTML <span class="percent">25%</span>
+            <span class="tech-dot css-dot"></span> CSS <span class="percent">25%</span>
+            <span class="tech-dot js-dot"></span> JavaScript <span class="percent">50%</span>
+          </div>
+          <a href="Calculator-main/Calculator-main/Web Lab Calculator-20250624T134428Z-1-001/Web Lab Calculator/index.html" class="btn btn-secondary hover-effect">View Calculator</a>
+        </div>
+      </div>
+
+      <!-- Daraz Clone Website Item -->
+      <div class="portfolio-item" data-aos="fade-up" data-aos-delay="300">
+        <div class="portfolio-content">
+          <div class="portfolio-icon"><i class="fas fa-file-code"></i></div>
+          <h3 class="animate-text">Daraz Clone</h3>
+          <p>A website that clones the Daraz layout using HTML, CSS, and JavaScript.</p>
+          <div class="tech-stack-bar">
+            <div class="bar-segment html" style="width: 35%;"></div>
+            <div class="bar-segment css" style="width: 35%;"></div>
+            <div class="bar-segment js" style="width: 30%;"></div>
+          </div>
+          <div class="tech-labels">
+            <span class="tech-dot html-dot"></span> HTML <span class="percent">35%</span>
+            <span class="tech-dot css-dot"></span> CSS <span class="percent">35%</span>
+            <span class="tech-dot js-dot"></span> JavaScript <span class="percent">30%</span>
+          </div>
+          <a href="Daraz-Replica-/index.html" class="btn btn-secondary hover-effect">View Website</a>
+        </div>
+      </div>
+
+      <!-- Harvard Style Website Portfolio Item -->
+      <div class="portfolio-item" data-aos="fade-up" data-aos-delay="400">
+        <div class="portfolio-content">
+          <div class="portfolio-icon"><i class="fas fa-university"></i></div>
+          <h3 class="animate-text">Harvard Styled Portfolio</h3>
+          <p>A modern replica of Harvard's official website using HTML, CSS, and JavaScript animations.</p>
+          <div class="tech-stack-bar">
+            <div class="bar-segment html" style="width: 30%;"></div>
+            <div class="bar-segment css" style="width: 45%;"></div>
+            <div class="bar-segment js" style="width: 25%;"></div>
+          </div>
+          <div class="tech-labels">
+            <span class="tech-dot html-dot"></span> HTML <span class="percent">30%</span>
+            <span class="tech-dot css-dot"></span> CSS <span class="percent">45%</span>
+            <span class="tech-dot js-dot"></span> JavaScript <span class="percent">25%</span>
+          </div>
+          <a href="Portfolio\index.html" class="btn btn-secondary hover-effect">View Project</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section section-padding">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-down">Reach Out</h2>
+            <p class="section-subtitle" data-aos="fade-up">Have an idea? Let’s make it real</p>
+            
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right" data-aos-delay="200">
+                    <h3>Contact Information</h3>
+                    <div class="contact-items">
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <div class="contact-details">
+                                <h4>Email</h4>
+                                <a href="mailto:kamrulhassan1250@gmail.com">kamrulhassan1250@gmail.com</a>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="contact-details">
+                                <h4>Location</h4>
+                                <p>Dhaka, Bangladesh</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <div class="contact-details">
+                                <h4>Phone</h4>
+                                <a href="tel:+8801990207710">+8801990207710</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/kamrul-hassan-799254368/" target="_blank" class="social-link" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/kamrul1250" target="_blank" class="social-link" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Footer Section -->
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h3 class="footer-logo">Kamrul Hassan</h3>
+                    <p class="footer-tagline">Empowering businesses through technology.</p>
+                </div>
+                <nav class="footer-nav">
+                    <a href="#about">About</a>
+                    <a href="#portfolio">Portfolio</a>
+                    <a href="#contact">Contact</a>
+                </nav>
+                <div class="footer-right">
+                    <div class="social-links">
+                        <a href="https://github.com/kamrul1250" target="_blank" class="social-link" aria-label="GitHub">
+                            <img src="https://placehold.co/30x30/ffffff/000000?text=GH" alt="GitHub Icon" class="github-icon">
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year"></span> Kamrul Hassan. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Link to the main JavaScript file for interactive elements -->
+    <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true
+        });
+    </script>
+</body>
+</html>
+
