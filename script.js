@@ -341,6 +341,7 @@ document.addEventListener('DOMContentLoaded', () => {
 ];
 
 
+
 function createTechStackHTML(techStack) {
   if (!techStack) return "";
 
