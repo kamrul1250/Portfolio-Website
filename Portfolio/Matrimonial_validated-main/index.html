@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Matrimonial Information Form</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="2.jpg" />
+</head>
+<body>
+  <div class="page-title">Matrimonial Information Form</div>
+  <div class="container">
+    <form autocomplete="on" id="matrimonialForm" onsubmit="return validateForm()">
+      <h3>Please fill up Matrimonial Information Form</h3>
+
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="fname" placeholder="First Name" required pattern="[A-Za-z]{2,}" title="First name should only contain letters and be at least 2 characters long" />
+
+      <label for="mname">Middle Name</label>
+      <input type="text" id="mname" name="mname" placeholder="Middle Name" pattern="[A-Za-z]*" title="Middle name should only contain letters" />
+
+      <label for="lname">Last Name</label>
+      <input type="text" id="lname" name="lname" placeholder="Last Name" required pattern="[A-Za-z]{2,}" title="Last name should only contain letters and be at least 2 characters long" />
+
+      <label>Gender</label>
+      <div class="radio-group">
+        <input type="radio" id="male" name="gender" value="Male" required />
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="Female" required />
+        <label for="female">Female</label>
+      </div>
+
+      <label for="birthday">Birthday</label>
+      <input type="date" id="birthday" name="birthday" required />
+
+      <label for="religion">Religion</label>
+      <input type="text" id="religion" name="religion" placeholder="Which religion do you practice?" required pattern="^[A-Za-z\s]{2,}$" title="Please enter a valid religion using letters only" />
+
+      <label for="height">Your Height (in cm):</label>
+      <input type="number" id="height" name="height" min="50" max="250" placeholder="e.g., 170" required />
+
+      <label for="weight">Your Weight (in kg):</label>
+      <input type="number" id="weight" name="weight" min="20" max="200" placeholder="e.g., 65" required />
+
+      <label for="marital-status">Marital status:</label>
+      <select id="marital-status" name="marital-status" required>
+        <option value="">Select one</option>
+        <option value="Never married">Never married</option>
+        <option value="Divorced">Divorced</option>
+        <option value="Widowed">Widowed</option>
+      </select>
+
+      <!-- Education Table (added fields) -->
+      <label>Educational Qualification</label>
+      <table class="education-table">
+        <thead>
+          <tr>
+            <th>Degree</th>
+            <th>Institution</th>
+            <th>Year of Passing</th>
+            <th>Grade/Percentage</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><input type="text" name="degree2" placeholder="e.g. SSC" required /></td>
+            <td><input type="text" name="institution2" placeholder="e.g. ABC School" required /></td>
+            <td><input type="number" name="year2" placeholder="e.g. 2022" min="1900" max="2099" required /></td>
+            <td><input type="text" name="grade2" placeholder="e.g. 90%" required /></td>
+          </tr>
+          <tr>
+            <td><input type="text" name="degree2" placeholder="e.g. HSC" required /></td>
+            <td><input type="text" name="institution2" placeholder="e.g. ABC College" required /></td>
+            <td><input type="number" name="year2" placeholder="e.g. 2022" min="1900" max="2099" required /></td>
+            <td><input type="text" name="grade2" placeholder="e.g. 90%" required /></td>
+          </tr>
+          <tr>
+            <td><input type="text" name="degree2" placeholder="e.g. B.Sc" required /></td>
+            <td><input type="text" name="institution2" placeholder="e.g. ABC University" required /></td>
+            <td><input type="number" name="year2" placeholder="e.g. 2022" min="1900" max="2099" required /></td>
+            <td><input type="text" name="grade2" placeholder="e.g. 90%" required /></td>
+          </tr>
+          <tr>
+            <td><input type="text" name="degree1" placeholder="e.g. M.Sc" required /></td>
+            <td><input type="text" name="institution1" placeholder="e.g. XYZ University" required /></td>
+            <td><input type="number" name="year1" placeholder="e.g. 2020" min="1900" max="2099" required /></td>
+            <td><input type="text" name="grade1" placeholder="e.g. 85%" required /></td>
+          </tr>
+          <tr>
+            <td><input type="text" name="degree1" placeholder="Others" required /></td>
+            <td><input type="text" name="institution1" placeholder="e.g. XYZ University" required /></td>
+            <td><input type="number" name="year1" placeholder="e.g. 2020" min="1900" max="2099" required /></td>
+            <td><input type="text" name="grade1" placeholder="e.g. 85%" required /></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <!-- Professional and Family Details -->
+      <label for="curprof">Current Profession</label>
+      <input type="text" id="curprof" name="curprof" placeholder="Current Profession" required pattern="[A-Za-z]{2,}" />
+
+      <label for="salary">Salary (in BDT):</label>
+      <input type="number" id="salary" name="salary" placeholder="In BDT" min="0" required pattern="[0-9]{1,}" />
+
+      <label for="dad">Father's Name</label>
+      <input type="text" id="dad" name="dad" placeholder="Father's Name" required pattern="[A-Za-z]{2,}" />
+
+      <label for="dadp">Father's Profession</label>
+      <input type="text" id="dadp" name="dadp" placeholder="Father's Profession" required pattern="[A-Za-z]{2,}" />
+
+      <label for="mom">Mother's Name</label>
+      <input type="text" id="mom" name="mom" placeholder="Mother's Name" required pattern="[A-Za-z]{2,}" />
+
+      <label for="momp">Mother's Profession</label>
+      <input type="text" id="momp" name="momp" placeholder="Mother's Profession" required pattern="[A-Za-z]{2,}" />
+
+      <!-- Current Status of Parents -->
+      <label>Father's Current Status</label>
+      <div class="radio-group">
+        <input type="radio" id="retired" name="dadstatus" value="Retired" required />
+        <label for="retired">Retired</label>
+        <input type="radio" id="nretired" name="dadstatus" value="Not Retired" required />
+        <label for="nretired">Not Retired</label>
+      </div>
+
+      <label>Mother's Current Status</label>
+      <div class="radio-group">
+        <input type="radio" id="momretired" name="momstatus" value="Retired" required />
+        <label for="momretired">Retired</label>
+        <input type="radio" id="momnretired" name="momstatus" value="Not Retired" required />
+        <label for="momnretired">Not Retired</label>
+      </div>
+
+      <!-- Sibling Information -->
+      <label>Do you have siblings?</label>
+      <div class="radio-group">
+        <input type="radio" id="sibi-yes" name="sibi" value="Yes" />
+        <label for="sibi-yes">Yes, I have</label>
+        <input type="radio" id="sibi-no" name="sibi" value="No" />
+        <label for="sibi-no">No</label>
+      </div>
+
+      <label for="sibquan">How many siblings do you have?</label>
+      <input type="number" id="sibquan" name="sibquan" placeholder="How many siblings do you have?" min="0" required pattern="[0-9]{1,}" />
+
+      <label for="sibquanb">How many brothers do you have?</label>
+      <input type="number" id="sibquanb" name="sibquanb" placeholder="How many brothers?" min="0" required pattern="[0-9]{1,}"/>
+
+      <label for="sibquans">How many sisters do you have?</label>
+      <input type="number" id="sibquans" name="sibquans" placeholder="How many sisters?" min="0" required pattern="[0-9]{1,}" />
+
+      <label for="sibling-details">Details of siblings</label>
+      <textarea id="sibling-details" name="sibling-details" rows="5" placeholder="e.g. What do they do?, Are they married?" required pattern="[A-Za-z]{2,}"></textarea>
+
+      <label for="hobby">Hobby</label>
+      <textarea id="hobby" name="hobby" rows="4" placeholder="What do you like?" required pattern="[A-Za-z]{2,}"></textarea>
+
+      <label for="future-planning">Future Planning</label>
+      <textarea id="future-planning" name="future-planning" rows="4" placeholder="What are you thinking about your future?" required pattern="[A-Za-z]{2,}"></textarea>
+
+      <!-- Partner Preferences -->
+      <h2>Partner Preferences</h2>
+
+      <label for="qualities">What qualities do you value most in a partner?</label>
+      <textarea id="qualities" name="qualities" rows="4" placeholder="Kindness, honesty, humor..." required pattern="[A-Za-z]{2,}"></textarea>
+
+      <label for="age-range">Preferred age range of partner:</label>
+      <input type="text" id="age-range" name="age-range" placeholder="e.g., 25-30 years" required />
+
+      <label for="partner-height">Preferred Partner Height (in cm):</label>
+      <input type="number" id="partner-height" name="partner-height" min="50" max="250" placeholder="e.g., 165" required />
+
+      <label for="partner-weight">Preferred Partner Weight (in kg):</label>
+      <input type="number" id="partner-weight" name="partner-weight" min="20" max="200" placeholder="e.g., 60" required />
+
+      <label for="education-preference">Preferred education qualification:</label>
+      <input type="text" id="education-preference" name="education-preference" placeholder="e.g., Graduate, Postgraduate" required />
+
+      <label for="location-preference">Are you okay if partner lives in a different city/country?</label>
+      <div class="radio-group">
+        <input type="radio" id="location-yes" name="location-preference" value="Yes" />
+        <label for="location-yes">Yes</label>
+        <input type="radio" id="location-no" name="location-preference" value="No" />
+        <label for="location-no">No</label>
+      </div>
+
+      <label for="deal-breakers">Any additional expectations or deal-breakers?</label>
+      <textarea id="deal-breakers" name="deal-breakers" rows="3" placeholder="Please specify" required pattern="[A-Za-z]{2,}"></textarea>
+
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
+    </form>
+    
+    <div class="image-upload">
+      <label for="Image">Upload your image</label>
+      <input type="file" id="Image" name="Image" accept="image/*" onchange="previewImage(event)" />
+      <input type="reset" value="Reset" onclick="clearPreview()" />
+      <br>
+      <img id="preview" src="2.jpg" alt="Your Image Preview" />
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <div class="creator-info">
+    <p>Created by <strong>Kamrul Hassan</strong></p>
+    <p>Email: <a href="mailto:kamrulhassan1250@example.com">kamrulhassan1250@example.com</a></p>
+    <p>
+      Connect:
+      <a href="https://www.linkedin.com/in/kamrul-hassan-799254368/" target="_blank">LinkedIn</a> |
+      <a href="https://github.com/kamrul1250" target="_blank">GitHub</a>
+    </p>
+  </div>
+</body>
+</html>

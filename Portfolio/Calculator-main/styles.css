@@ -1,0 +1,95 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: lightgreen;
+  font-family: Arial, sans-serif;
+}
+
+#calculator {
+  background-color: hsl(0, 0%, 15%);
+  border-radius: 20px;
+  width: 320px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+h1.name {
+  text-align: center;
+  color: orange;
+  margin-bottom: 20px;
+}
+
+#display {
+  width: 100%;
+  padding: 10px;
+  font-size: 2rem;
+  text-align: right;
+  border: 2px solid hsl(0, 0%, 15%);
+  border-radius: 10px;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+#keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 20px;
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(248, 248, 248);
+  color: black;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+  background-color: white;
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+button:focus {
+  outline: none;
+}
+
+button:nth-child(4n) {
+  background-color: #ff9800;
+  color: white;
+}
+
+button:nth-child(4n):hover {
+  background-color: #f57c00;
+}
+
+button:nth-child(4n):active {
+  background-color: #e65100;
+}
+
+button:last-child {
+  background-color: #ff5722;
+  color: white;
+}
+
+button:last-child:hover {
+  background-color: #e64a19;
+}
+
+button:last-child:active {
+  background-color: #d84315;
+}

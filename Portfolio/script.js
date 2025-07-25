@@ -5,23 +5,25 @@ const projects = [
     description: "A structured display of personal and professional information.",
     iconClass: "fas fa-file-code",
     techStack: { html: 40, css: 30, js: 30 },
-    link: "/Matrimonial_validated-main/index.html"  // absolute path from root
+    link: "Matrimonial_validated-main/index.html" // absolute path from root
   },
-  {
+ {
     title: "Simple Calculator",
     description: "A basic JavaScript calculator for arithmetic operations.",
     iconClass: "fas fa-calculator",
     techStack: { html: 25, css: 25, js: 50 },
-    link: "/Calculator-main/Calculator-main/Web Lab Calculator-20250624T134428Z-1-001/Web Lab Calculator/index.html"
+    link: "Calculator-main/index.html"
   },
+
   {
     title: "Daraz Clone",
     description: "A website that clones the Daraz layout using HTML, CSS, and JavaScript.",
     iconClass: "fas fa-file-code",
     techStack: { html: 35, css: 35, js: 30 },
-    link: "/Daraz-Replica-/index.html"  // absolute path from root
+    link: "Daraz-Replica-/index.html"  // absolute path from root
   },
 ];
+
 
 
 // ===== Tech Stack HTML Generator =====
